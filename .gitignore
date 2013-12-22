@@ -1,0 +1,7 @@
+out/
+build/
+.gradle/
+bank.ipr
+bank.iws
+bank.iml
+.DS_Store
