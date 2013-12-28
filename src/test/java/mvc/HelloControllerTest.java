@@ -9,10 +9,12 @@ import static org.junit.Assert.assertThat;
 public class HelloControllerTest {
 
 	@Test
-	public void shouldReturnRightViewAndModel() throws Exception {
+	public void shouldRenderHelloPageAndContainTheMessageValue() throws Exception {
+		//given
 		ModelMap model = new ModelMap();
+		//when
 		String returnView = new HelloController().printWelcome(model);
-
+        //then
 		assertThat(returnView, is("hello"));
 		assertThat(model.get("message").toString(), is("Hello world!"));
 
