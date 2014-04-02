@@ -16,6 +16,10 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "passedStudents")
 public class StudentController {
+	public void setStudentService(StudentService studentService) {
+		this.studentService = studentService;
+	}
+
 	@Autowired
 	private StudentService studentService;
 	@Value("myValue")
@@ -33,5 +37,11 @@ public class StudentController {
 	@ResponseBody
 	public List<Student> getJson() {
 		return studentService.getAllPassedStudents();
+	}
+
+	@RequestMapping(value="student",method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+	@ResponseBody
+	public Student getJsonStudent() {
+		return studentService.getAllPassedStudents().get(0);
 	}
 }

@@ -9,9 +9,7 @@ repositories {
 
 dependencies {
     compile "org.springframework:spring-webmvc:3.2.6.RELEASE",
-            "javax.servlet:servlet-api:2.5",
             "com.google.guava:guava:11.0.2",
-            "javax.servlet.jsp:jsp-api:2.1",
             'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
 
 

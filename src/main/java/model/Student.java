@@ -1,8 +1,11 @@
 package model;
 
 public class Student {
-	private String name;
 	private double grade;
+
+	private String name;
+	public Student() {
+	}
 
 	public Student(String name, double grade) {
 		this.name = name;
@@ -16,6 +19,14 @@ public class Student {
 	public double getGrade() {
 		return grade;
 	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//
+//	public void setGrade(double grade) {
+//		this.grade = grade;
+//	}
 
 	@Override
 	public boolean equals(Object o) {
