@@ -15,9 +15,9 @@ public class StudentServiceTest {
 	public void shouldGetAllThePassedStudents() {
 		//given
 		StudentService studentService = new StudentService();
-		List<Student>  expectedStudents = newArrayList(
-				new Student("studentTwo",60),
-				new Student("studentThree",70));
+		List<Student> expectedStudents = newArrayList(
+				new Student("studentTwo", 60),
+				new Student("studentThree", 70));
 		//when
 		List<Student> students = studentService.getAllPassedStudents();
 		//then
