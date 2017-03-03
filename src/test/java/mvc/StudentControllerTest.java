@@ -29,19 +29,4 @@ public class StudentControllerTest {
 		assertThat((List<Student>) modelMap.get("students"), is(expectedStudents));
 
 	}
-
-	@Test
-	public void shouldGetJson() {
-
-		RestTemplate restTemplate = new RestTemplate();
-
-		Student forObject =  restTemplate.getForObject("http://localhost:8080/SpringMVC/passedStudents/student",
-				Student.class);
-		System.out.println(forObject.getName());
-		System.out.println(forObject.toString());
-	}
-
-
-
-
 }
